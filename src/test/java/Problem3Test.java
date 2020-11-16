@@ -1,4 +1,5 @@
 import Problem1.TreeNode;
+import Problem1.InOrderTraverse;
 import Problem3.InsertInBST;
 import org.junit.Test;
 
@@ -34,8 +35,15 @@ public class Problem3Test {
 
     @Test
     public void testInOrderTraverse() {
-        // homework
-        // to verify inOrderTraverse(TreeNode<Integer> node)
+        TreeNode<Integer> actual = new TreeNode<>(5);
+        actual.left = new TreeNode<>(2);
+        actual.right = new TreeNode<>(6);
+
+        List<Integer> expect = new ArrayList<>();
+        expect.add(1);
+        expect.add(5);
+
+        assertEquals(expect, inOrderTraverse(actual));
     }
 
     private static List<Integer> inOrderTraverse(TreeNode<Integer> node) {
@@ -146,7 +154,7 @@ public class Problem3Test {
         //    N   N
         // homework
         // what problem can you see for insertInBst from this test case?
-        // answer:
+        // answer: Inserting these values will slower the search rate.
         // discuss how you would solve it in a comment below
         // answer:
         root = new TreeNode<>(1);
