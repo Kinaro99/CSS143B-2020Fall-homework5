@@ -156,7 +156,7 @@ public class Problem3Test {
         // what problem can you see for insertInBst from this test case?
         // answer: Inserting these values will slower the search rate.
         // discuss how you would solve it in a comment below
-        // answer:
+        // answer: Store larger numbers to the right most node to help reduce search rate?
         root = new TreeNode<>(1);
         testCases.add(new BSTTestCase<>(root, 2, Arrays.asList(1, 2)));
         testCases.add(new BSTTestCase<>(root, 3, Arrays.asList(1, 2, 3)));
